@@ -22,24 +22,24 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.amphibians.ui.AmphibianViewModel" />
+            type="fr.em.cuibandroid.ui.ArticleViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- TODO: set the text to the name from the single Amphibian object in the view model -->
+        <!-- TODO: set the text to the name from the single Article object in the view model -->
         <TextView
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline2"
-            android:text="@{viewModel.amphibian.name}"
+            android:text="@{viewModel.article.titre}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Blue Jeans Frog"/>
+            tools:text="Article de Salsa"/>
 
         <View
             android:layout_width="match_parent"
@@ -50,17 +50,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/name"/>
 
-        <!-- TODO: set the text to the description from the Amphibian object in the view model -->
+        <!-- TODO: set the text to the description from the Article object in the view model -->
         <TextView
             android:id="@+id/description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
-            android:text="@{viewModel.amphibian.description}"
+            android:text="@{viewModel.article.genre}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/name"
-            tools:text="Bright red body, blue legs"/>
+            tools:text="1"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

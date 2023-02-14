@@ -22,7 +22,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.amphibians.ui.AmphibianViewModel" />
+            type="fr.em.cuibandroid.ui.ArticleViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -38,7 +38,7 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:listData="@{viewModel.amphibians}"
+            app:listData="@{viewModel.articles}"
             tools:listitem="@layout/list_view_item" />
 
         <!--  set the apiStatus binding to the status from the view model -->

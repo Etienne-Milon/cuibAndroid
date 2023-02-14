@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import fr.em.cuibandroid.model.Article
+import fr.em.cuibandroid.network.Article
 import fr.em.cuibandroid.network.CuibApi
 import kotlinx.coroutines.launch
 
@@ -28,6 +28,7 @@ class ArticleViewModel : ViewModel(){
             _status.value = ArticleApiStatus.LOADING
             try {
                 _articles.value = CuibApi.retrofitService.getArticles()
+                println(articles.value.toString())
                 _status.value = ArticleApiStatus.DONE
             }
             catch (e: java.lang.Exception){
@@ -36,9 +37,8 @@ class ArticleViewModel : ViewModel(){
             }
         }
     }
-    //Note : ici, c'est l'objet 'Article' qui est clickable, à voir ce que l'on souhaite réelement
-    // peut-être
-
+    // TODO Note : ici, c'est l'objet 'Article' qui est rendu clickable, à voir ce que l'on souhaite réellement
+    //  peut-être que ça doit être l'item c-à-d un composant personnalisé, un bouton de l'item ?? peu clair :/
     fun onArticleClicked(article: Article){
         _article.value = article
     }
