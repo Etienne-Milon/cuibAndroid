@@ -50,7 +50,6 @@ class ArticleListAdapter(val clickListener: ArticleListener) :
     }
 }
 
-
 class ArticleListener (val clickListener: (article : Article) -> Unit){
     fun onClick(article: Article) = clickListener(article)
 }
